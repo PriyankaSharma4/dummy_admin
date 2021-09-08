@@ -1,0 +1,25 @@
+
+# PostgreSQL. Versions 9.1 and up are supported.
+
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database:  login_dev1
+  username: postgres
+  password: postgres
+production:
+  <<: *default
+  database: login_pro1
+  username: postgres
+  password: postgres
+test:
+  <<: *default
+  database: login_test1
+  username: postgres
+  password: postgres
